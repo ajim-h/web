@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog by Ajim Hossain on chemical engineering, biofuels, sustainability, and innovation.">
+  <meta name="keywords" content="Ajim Hossain, Chemical Engineering, Biofuels, Sustainability, Technology, Blog">
+  <meta name="author" content="Ajim Hossain">
+  <title>Blog | Ajim Hossain</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="https://via.placeholder.com/40" alt="Ajim Hossain Logo" class="brand__logo">
+        <span class="brand__name">Ajim Hossain</span>
+      </a>
+      <nav class="primary-nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="blog.html" class="nav-link" aria-current="page">Blog</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section">
+      <div class="hero__bg"></div>
+      <div class="animation-container bio-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      <div class="container">
+        <div class="hero__content reveal">
+          <h1 class="h1">Insights on Science & Sustainability</h1>
+          <p class="lead">Exploring advancements in chemical engineering, biofuels, and sustainable innovation.</p>
+          <div class="hero__cta">
+            <a href="#posts" class="btn btn--primary">Read Posts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="posts" class="section blog-posts">
+      <div class="animation-container bio-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      <div class="container">
+        <h2 class="h2 section__header">Blog Posts</h2>
+        <div class="blog-controls">
+          <input type="text" id="blog-search" placeholder="Search posts..." class="search-input">
+          <div class="tag-filter">
+            <button class="tag-btn" data-tag="all">All</button>
+            <button class="tag-btn" data-tag="biofuels">Biofuels</button>
+            <button class="tag-btn" data-tag="sustainability">Sustainability</button>
+            <button class="tag-btn" data-tag="technology">Technology</button>
+          </div>
+        </div>
+        <div class="grid cards blog-grid">
+          <article class="card blog-card reveal" data-tags="biofuels,sustainability">
+            <h3 class="h3">The Future of Biofuels</h3>
+            <p class="blog-meta">September 1, 2025 | Biofuels, Sustainability</p>
+            <p>Exploring sustainable energy solutions through advancements in biofuel technology...</p>
+            <a href="#" class="btn btn--link">Read More</a>
+          </article>
+          <article class="card blog-card reveal" data-tags="technology,biofuels">
+            <h3 class="h3">CRISPR in Biosensors</h3>
+            <p class="blog-meta">August 15, 2025 | Technology, Biofuels</p>
+            <p>Leveraging CRISPR-Cas12a for point-of-care diagnostics...</p>
+            <a href="#" class="btn btn--link">Read More</a>
+          </article>
+          <article class="card blog-card reveal" data-tags="sustainability">
+            <h3 class="h3">Sustainable Chemical Processes</h3>
+            <p class="blog-meta">July 20, 2025 | Sustainability</p>
+            <p>Innovations in chemical engineering for a greener future...</p>
+            <a href="#" class="btn btn--link">Read More</a>
+          </article>
+        </div>
+        <div class="pagination">
+          <button class="btn btn--secondary load-more">Load More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ajim Hossain. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon">Facebook</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon">Instagram</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
