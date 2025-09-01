@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="https://via.placeholder.com/40" alt="Ajim Hossain Logo" class="brand__logo">
+        <img src="https://via.placeholder.com/50" alt="Ajim Hossain Logo" class="brand__logo">
         <span class="brand__name">Ajim Hossain</span>
       </a>
       <nav class="primary-nav">
@@ -26,14 +26,16 @@
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
         </button>
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link" aria-current="page">About</a></li>
-          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li><a href="blog.html" class="nav-link">Blog</a></li>
-          <li><a href="resume.html" class="nav-link">Resume</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+        <div class="nav-overlay">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link" aria-current="page">About</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="resume.html" class="nav-link">Resume</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -41,84 +43,97 @@
   <main id="main-content">
     <section class="hero section about-hero">
       <div class="hero__bg"></div>
-      <div class="animation-container bio-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+      <div class="animation-container particles"></div>
+      <div class="animation-container shapes">
+        <div class="shape sphere"></div>
+        <div class="shape sphere"></div>
+        <div class="shape poly"></div>
       </div>
       <div class="container">
         <div class="hero__content reveal">
+          <img src="https://via.placeholder.com/150" alt="Ajim Hossain Profile" class="hero__profile">
           <h1 class="h1">About Me</h1>
           <p class="lead">I’m a Chemical Engineering student at BUET, passionate about advancing research in biofuels and sustainable chemical processes. With a strong foundation in leadership, data analysis, and process design, I aim to contribute to innovative solutions in chemical engineering.</p>
         </div>
       </div>
     </section>
 
+    <div class="wave-divider"></div>
+
     <section class="section education">
       <div class="container">
         <h2 class="h2 section__header">Education</h2>
         <div class="grid cards">
-          <div class="card reveal">
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Education Icon" class="card__icon">
             <h3 class="h3">Bachelor of Science in Chemical Engineering</h3>
             <p>Bangladesh University of Engineering and Technology (BUET) | July 2022 – Present</p>
             <p>CGPA: 3.83/4.00 (4 terms), Top 10% of the class</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Education Icon" class="card__icon">
             <h3 class="h3">Higher Secondary Certificate (HSC)</h3>
             <p>Jonail Degree College (JDC) | July 2019 – February 2022</p>
             <p>GPA: 5.00/5.00, 98% marks in PCM</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Education Icon" class="card__icon">
             <h3 class="h3">Secondary School Certificate (SSC)</h3>
             <p>St. Louis High School | January 2014 – February 2019</p>
             <p>GPA: 5.00/5.00, 93.5% marks in PCMM</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <div class="wave-divider"></div>
+
     <section class="section leadership section--inverse">
-      <div class="animation-container bio-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
+      <div class="animation-container particles"></div>
       <div class="container">
         <h2 class="h2 section__header">Leadership</h2>
         <div class="grid cards">
-          <div class="card reveal">
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Regional Chair, Southern Asia Regional Subcommittee, AIChE Executive Students Committee</h3>
             <p>Current Role</p>
             <p>Leading 6 liaisons to connect and revitalize more than 50 student chapters across Southern Asia, establishing communication channels, and organizing virtual regional meetings to foster engagement and collaboration.</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Co-Chair, BUET AIChE Chapter, Events Management Team</h3>
             <p>Current Role</p>
             <p>Directed the launch of new competitions, initiated an industrial tour program, and coordinated expert webinars, enhancing student engagement and professional development opportunities.</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Regional Liaison, AIChE Executive Students Committee</h3>
             <p>2024–2025</p>
             <p>Revived communication with inactive chapters by contacting leaders, scheduling meetings, and creating WhatsApp groups, while co-organizing virtual regional meetings with diverse participation.</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Volunteer & Team Lead, US Edu Fair 2025</h3>
             <p>2025</p>
             <p>Managed crowd control and logistics, leading a team to ensure smooth event operations.</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Invigilator, EXCELista 2024 AutoCAD Competition</h3>
             <p>2024</p>
             <p>Oversaw the competition, ensuring fairness and smooth execution under pressure.</p>
-          </div>
-          <div class="card reveal">
+          </article>
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/60" alt="Leadership Icon" class="card__icon">
             <h3 class="h3">Competition Planner, Chemical Day 2023</h3>
             <p>2023</p>
             <p>Assisted in planning student competitions, working efficiently under tight deadlines.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
+
+    <div class="wave-divider"></div>
   </main>
 
   <footer class="site-footer">
@@ -132,6 +147,7 @@
     </div>
   </footer>
 
+  <div class="cursor"></div>
   <script src="js/animations.js" defer></script>
 </body>
 </html>
