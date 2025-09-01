@@ -1,113 +1,122 @@
 /* ==========================================================================
-   Animations
+   Hero Animations
+   ========================================================================== */
+.hero__bg {
+  animation: fluidGradient 12s ease-in-out infinite;
+}
+@keyframes fluidGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.shapes .shape {
+  animation: rotateShape 20s linear infinite;
+}
+.shapes .sphere:nth-child(2) { animation-delay: -5s; }
+.shapes .poly:nth-child(3) { animation-delay: -10s; }
+@keyframes rotateShape {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   Particle Animations
+   ========================================================================== */
+.particles .particle {
+  animation: particleFloat 4s ease-in-out infinite, particleWobble 2s ease-in-out infinite;
+}
+.particles .particle:nth-child(even) { animation-delay: -2s, -1s; }
+.particles .particle:nth-child(3n) { animation-delay: -3s, -1.5s; }
+@keyframes particleFloat {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes particleWobble {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ==========================================================================
+   Card Reveal Animations
    ========================================================================== */
 .reveal {
   opacity: 0;
-  transform: translateY(30px) rotate(2deg);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0) rotate(0deg);
-}
-.hero__bg {
-  animation: fluidWave 12s ease-in-out infinite;
-  background-size: 200% 200%;
-}
-@keyframes fluidWave {
-  0% { background-position: 0% 50%; transform: translateY(0); }
-  25% { background-position: 50% 100%; transform: translateY(-10px); }
-  50% { background-position: 100% 50%; transform: translateY(0); }
-  75% { background-position: 50% 0%; transform: translateY(-10px); }
-  100% { background-position: 0% 50%; transform: translateY(0); }
-}
+.reveal.in-view { opacity: 1; }
+.cards .reveal:nth-child(odd) { transform: translateX(-50px) rotate(5deg); }
+.cards .reveal:nth-child(even) { transform: translateX(50px) rotate(-5deg); }
+.cards .reveal.in-view { transform: translateX(0) rotate(0deg); }
+.cards .reveal:nth-child(1) { transition-delay: 0.1s; }
+.cards .reveal:nth-child(2) { transition-delay: 0.2s; }
+.cards .reveal:nth-child(3) { transition-delay: 0.3s; }
+.cards .reveal:nth-child(4) { transition-delay: 0.4s; }
+
+/* ==========================================================================
+   Section Header Animations
+   ========================================================================== */
 .section__header {
   opacity: 0;
   transform: translateX(-30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
-.section__header.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-.card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease, rotate 0.4s ease;
-}
-.card:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: var(--shadow-2);
-}
-.cards .card:nth-child(1) { transition-delay: 0.1s; }
-.cards .card:nth-child(2) { transition-delay: 0.2s; }
-.cards .card:nth-child(3) { transition-delay: 0.3s; }
-.cards .card:nth-child(4) { transition-delay: 0.4s; }
-.cards .card:nth-child(5) { transition-delay: 0.5s; }
-.cards .card:nth-child(6) { transition-delay: 0.6s; }
-.nav-list li {
+.section__header.in-view { opacity: 1; transform: translateX(0); }
+
+/* ==========================================================================
+   Wave Divider Animations
+   ========================================================================== */
+.wave-divider {
   opacity: 0;
-  transform: translateY(-15px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scaleX(1);
+  transition: opacity 0.7s ease-in-out, transform 1s ease-in-out;
 }
-.nav-list li.in-view { opacity: 1; transform: translateY(0); }
-.nav-list li:nth-child(1) { transition-delay: 0.1s; }
-.nav-list li:nth-child(2) { transition-delay: 0.15s; }
-.nav-list li:nth-child(3) { transition-delay: 0.2s; }
-.nav-list li:nth-child(4) { transition-delay: 0.25s; }
-.nav-list li:nth-child(5) { transition-delay: 0.3s; }
-.nav-list li:nth-child(6) { transition-delay: 0.35s; }
+.wave-divider.in-view {
+  opacity: 1;
+  transform: scaleX(1.2);
+}
+
+/* ==========================================================================
+   Navigation Animations
+   ========================================================================== */
 .nav-list {
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease-in-out;
 }
 .nav-list.is-open {
   transform: scaleY(1);
-  opacity: 1;
 }
+.nav-toggle__bar:nth-child(1) { transition-delay: 0s; }
+.nav-toggle__bar:nth-child(2) { transition-delay: 0.1s; }
+.nav-toggle__bar:nth-child(3) { transition-delay: 0.2s; }
+.nav-toggle.is-open .nav-toggle__bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.nav-toggle.is-open .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open .nav-toggle__bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ==========================================================================
+   Footer Animations
+   ========================================================================== */
 .site-footer {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 .site-footer.in-view {
   opacity: 1;
   transform: translateY(0);
 }
-.stars .particle.star {
-  animation: twinkle 2.5s infinite ease-in-out;
-}
-.stars .particle.star:nth-child(2) { animation-delay: 0.5s; }
-.stars .particle.star:nth-child(3) { animation-delay: 1s; }
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.2); }
-}
-.rocket::before {
-  animation: launch 8s infinite ease-out;
-}
-.rocket::after {
-  animation: flame 8s infinite ease-out;
-}
-@keyframes launch {
-  0% { transform: translate(-50%, 0) scale(1); opacity: 1; }
-  100% { transform: translate(-50%, -100vh) scale(0.5); opacity: 0; }
-}
-@keyframes flame {
-  0% { opacity: 1; transform: translate(-50%, 0) scale(1); }
-  50% { opacity: 0.7; transform: translate(-50%, 10px) scale(1.2); }
-  100% { opacity: 0; transform: translate(-50%, 20px) scale(1); }
-}
-.bio-particles .particle {
-  animation: float 6s infinite ease-in-out, wobble 3s infinite ease-in-out;
-}
-.bio-particles .particle:nth-child(2) { animation-delay: 1s, 1.5s; }
-.bio-particles .particle:nth-child(3) { animation-delay: 2s, 2.5s; }
-@keyframes float {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(20px, -30px) rotate(15deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-@keyframes wobble {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }
